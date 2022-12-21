@@ -1,0 +1,25 @@
+# Dockerという、PC内に仮想環境を作れるツールを用いて、Ruby on Rails環境を構築できるテンプレートです。
+## 導入手順
+- developフォルダの作成
+- 以下のコマンドを順番に、ターミナルに打ち込んで実行していきましょう。
+  - mkdir develop
+- このテンプレートを自分の環境に入れるために、以下の手順を踏みましょう。
+  - GIT管理ツールの導入(sourcetree)
+    - インストールURL
+      - https://www.sourcetreeapp.com/
+    - もしくは、こちらの記事を読むと、導入がスムーズかもしれないです。(SourceTreeをインストールするまで)
+      - https://itsakura.com/sourcetree-install
+- DockerをPCにインストールします。
+  - インストールURL
+    - https://matsuand.github.io/docs.docker.jp.onthefly/desktop/mac/install/
+    - https://matsuand.github.io/docs.docker.jp.onthefly/desktop/windows/install/
+  - インストールして、Dockerを立ち上げるとこまでやりましょう。
+- ソースコードの入手
+  - トップ左上の「新規 > URLからクローン」をクリック
+  - ソースURL: git@github.com:SNOOTECH/docker-rails-template.git
+  - 保存先のパス: /Users/〇〇/develop/docker-rails-template
+  - 名前: 自動入力されたものそのまま
+- サーバーの立ち上げ
+  - 以下のコマンドを順番に、ターミナルに打ち込んで実行していきましょう。
+    - cd ~/develop ; docker-compose build
+    - docker-compose up -d ; docker attach docker-rails-app
